@@ -1,7 +1,7 @@
 import os
 from Print import *
 class CryptoWallets:
-    def EditPhysicalWallet(wallet):
+    def EditPhysicalWallet(s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12):
         path = "data/Physical Wallet.txt"
 
         dir_path = os.path.dirname(path) # Get the folder part "data"
@@ -10,8 +10,20 @@ class CryptoWallets:
             os.makedirs(dir_path) # Created the folder
 
         with open(path, 'w') as f:
-            f.write(wallet) # write the wallet data
-            printc(f"Successfully Changed Physical Wallet Crypto Address To -> {wallet} !", "g", True)
+            f.write("") # write the wallet data
+            f.append(s1)
+            f.append(s2)
+            f.append(s3)
+            f.append(s4)
+            f.append(s5)
+            f.append(s6)
+            f.append(s7)
+            f.append(s8)
+            f.append(s9)
+            f.append(s10)
+            f.append(s11)
+            f.append(s12)
+            printc(f"Successfully Changed Physical Wallet Crypto Address To -> {s1}, {s2}... !", "g", True)
         
         
     def EditTargetWallet(wallet):
