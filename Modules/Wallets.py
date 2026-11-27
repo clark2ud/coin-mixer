@@ -7,7 +7,7 @@ class CryptoWallets:
         dir_path = os.path.dirname(path) # Get the folder part "data"
 
         if dir_path and not os.path.exists(dir_path): # Create the folder if it doesn't exist
-            os.makedirs(dir_path) # Created the folder
+            os.makedirs(dir_path) # Create the folder
 
     with open(path, 'w') as f:
 
@@ -40,9 +40,9 @@ class CryptoWallets:
 
         try:
             with open(path, 'r', encoding='utf-8') as file:
-                PhysicalWallet = file.read()
+                PhysicalWallet = file.read() # read the path file
             
-            return PhysicalWallet
+            return PhysicalWallet # retrive the wallet
 
         except FileNotFoundError:
             print(f"Error: The file '{path}' was not found.")

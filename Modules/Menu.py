@@ -138,7 +138,7 @@ class Menu:
         print("\n\n")
         for l in Menu_list:
             n += 1
-            print(Fore.GREEN + str([n]) + " " + l)
+            print(Fore.GREEN + str([n]) + " " + l) # print the menu list
 
         choice = int(input("\n\nSelect An Option > "))
         if choice == 1:
@@ -152,7 +152,7 @@ class Menu:
                 word = cprintinput(f"{i}: ", "y", False)
                 seed_words.append(word)
 
-            CryptoWallets.EditPhysicalWallet(*seed_words)
+            CryptoWallets.EditPhysicalWallet(*seed_words) 
 
         elif choice == 2:
             os.sys("clear")

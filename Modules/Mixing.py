@@ -29,7 +29,6 @@ class CoinMixer:
                 time.sleep(random.uniform(0.1, 3))
 
             
-            # implementation goes here later...
 
         if choice == "n":
             os.sys("clear")
