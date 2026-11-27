@@ -23,10 +23,9 @@ class CoinMixer:
         
         choice = cprintinput("Are you sure You want to Mix? (y/n): ", "y", True)
         if choice == "y":
-            os.sys("clear")
-            InitalizeBackground()
+
             for i in range(16):
-                cprint(GetRandomCryptoWallet()[:20], "g", False)
+                cprint(GetRandomCryptoWallet()[:20] + "...", "g", False)
                 time.sleep(random.uniform(0.1, 3))
 
             
