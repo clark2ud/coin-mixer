@@ -9,21 +9,15 @@ class CryptoWallets:
         if dir_path and not os.path.exists(dir_path): # Create the folder if it doesn't exist
             os.makedirs(dir_path) # Created the folder
 
-        with open(path, 'w') as f:
-            f.write("") # write the wallet data
-            f.append(s1)
-            f.append(s2)
-            f.append(s3)
-            f.append(s4)
-            f.append(s5)
-            f.append(s6)
-            f.append(s7)
-            f.append(s8)
-            f.append(s9)
-            f.append(s10)
-            f.append(s11)
-            f.append(s12)
-            printc(f"Successfully Changed Physical Wallet Crypto Address To -> {s1}, {s2}... !", "g", True)
+    with open(path, 'w') as f:
+
+        f.write("")  # clear the file
+    
+    # Write each seed  as a new line
+    for item in [s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12]:
+        f.write(str(item) + '\n')
+
+    printc(f"Successfully Changed Physical Wallet Crypto Address To -> {s1}, {s2}... !", "g", True)
         
         
     def EditTargetWallet(wallet):
@@ -39,7 +33,7 @@ class CryptoWallets:
             printc(f"Successfully Changed Target Wallet Crypto Address To -> {wallet} !", "g", True)
 
 
-    def RetriveTargetWallet():
+    def RetrivePhysicalWallet():
         path = "data/Physical Wallet.txt"
 
         try:

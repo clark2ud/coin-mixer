@@ -145,20 +145,14 @@ class Menu:
             os.sys("clear")
             InitalizeBackground()
             cprint("Enter Your Physical Wallet Seed Phrase", "y", True)
-            sd1 = cprintinput("1: ", "y", False)
-            sd2 = cprintinput("2: ", "y", False)
-            sd3 = cprintinput("3: ", "y", False)
-            sd4 = cprintinput("4: ", "y", False)
-            sd5 = cprintinput("5: ", "y", False)
-            sd6 = cprintinput("6: ", "y", False)
-            sd7 = cprintinput("7: ", "y", False)
-            sd8 = cprintinput("8: ", "y", False)
-            sd9 = cprintinput("9: ", "y", False)
-            sd10 = cprintinput("10: ", "y", False)
-            sd11 = cprintinput("11: ", "y", False)
-            sd12 = cprintinput("12: ", "y", False)
 
-            CryptoWallets.EditPhysicalWallet(sd1, sd2, sd3, sd4, sd5, sd6, sd7, sd8, sd9, sd10, sd11, sd12)
+            
+            seed_words = [] # Collect all seed phrase into a list
+            for i in range(1, 13):  # Changes 1-12 automatically
+                word = cprintinput(f"{i}: ", "y", False)
+                seed_words.append(word)
+
+            CryptoWallets.EditPhysicalWallet(*seed_words)
 
         elif choice == 2:
             os.sys("clear")
