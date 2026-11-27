@@ -36,6 +36,8 @@ class CryptoWallets:
     def RetrivePhysicalWallet():
         path = "data/Physical Wallet.txt"
 
+
+
         try:
             with open(path, 'r', encoding='utf-8') as file:
                 PhysicalWallet = file.read()
